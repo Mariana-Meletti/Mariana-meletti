@@ -1516,3 +1516,152 @@ h4, .h4 {
   height: 28px;
   fill: #ffffff;
 }
+
+/* ============================================================
+   LIVRO
+   ============================================================ */
+.livro {
+  background-color: var(--color-dark);
+  padding: var(--spacing-section-lg) 0;
+}
+
+.livro__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.livro__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.livro__cover-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.livro__cover {
+  width: 320px;
+  height: auto;
+  border-radius: var(--radius-card);
+  display: block;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.55);
+}
+
+.livro__badge {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+
+.livro__content .label {
+  color: var(--color-accent);
+}
+
+.livro__content h2 {
+  color: var(--color-white);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-heading);
+  line-height: 1.15;
+  margin-top: 12px;
+}
+
+.livro__content h2 em {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.livro__desc {
+  color: #a0a09a;
+  font-size: var(--font-size-body-lg);
+  line-height: 1.75;
+  margin-top: 24px;
+  max-width: 520px;
+}
+
+.livro__highlights {
+  list-style: none;
+  padding: 0;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.livro__highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--color-white);
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+}
+
+.livro__highlight-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.livro__highlight-icon svg {
+  width: 10px;
+  height: 10px;
+  stroke: var(--color-dark);
+}
+
+/* Responsivo livro */
+@media (max-width: 1023px) {
+  .livro__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .livro__cover {
+    width: 260px;
+  }
+
+  .livro__desc {
+    max-width: 100%;
+  }
+
+  .livro__highlights li {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .livro__badge {
+    right: -8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .livro {
+    padding: var(--spacing-section) 0;
+  }
+
+  .livro__content h2 {
+    font-size: var(--font-size-h3);
+  }
+
+  .livro__cover {
+    width: 220px;
+  }
+}
