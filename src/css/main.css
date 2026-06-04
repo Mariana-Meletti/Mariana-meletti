@@ -1664,8 +1664,27 @@ h4, .h4 {
   display: block;
 }
 
-.livro__cta {
+.livro__preco {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   margin-top: 24px;
+}
+
+.livro__preco-valor {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.livro__preco-label {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.livro__cta {
+  margin-top: 16px;
   border: 2px solid var(--color-white);
   color: var(--color-white);
   background: transparent;
