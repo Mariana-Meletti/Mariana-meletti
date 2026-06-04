@@ -786,6 +786,30 @@ h4, .h4 {
   margin-top: 16px;
 }
 
+.sobre__quote {
+  margin: 24px 0 0;
+  padding: 20px 24px;
+  border-left: 3px solid #000;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 0 var(--radius-card-sm) var(--radius-card-sm) 0;
+}
+
+.sobre__quote p {
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+}
+
+.sobre__quote footer {
+  margin-top: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-heading);
+  color: #000;
+  opacity: 0.6;
+}
+
 .sobre__badge {
   display: inline-block;
   background-color: #000;
