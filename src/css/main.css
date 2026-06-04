@@ -1698,3 +1698,154 @@ h4, .h4 {
     width: 220px;
   }
 }
+
+/* ============================================================
+   DEPOIMENTOS — Marquee
+   ============================================================ */
+
+.depoimentos {
+  padding: var(--spacing-section) 0;
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.depoimentos__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.depoimentos__header h2 {
+  margin-top: 12px;
+}
+
+.marquee-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+}
+
+.marquee-track--forward {
+  animation: marquee-forward 40s linear infinite;
+}
+
+.marquee-track--reverse {
+  animation: marquee-reverse 40s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-forward {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.marquee-content {
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.depoimento-card {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--color-light);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: default;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  margin: 0;
+}
+
+.depoimento-card:hover {
+  background: #f0ede6;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.depoimento-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.depoimento-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.depoimento-card__nome {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-dark);
+  line-height: 1.2;
+}
+
+.depoimento-card__cidade {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+.depoimento-card__texto {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-dark);
+  font-style: normal;
+}
+
+.marquee-fade--left,
+.marquee-fade--right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.marquee-fade--left {
+  left: 0;
+  background: linear-gradient(to right, var(--color-white), transparent);
+}
+
+.marquee-fade--right {
+  right: 0;
+  background: linear-gradient(to left, var(--color-white), transparent);
+}
+
+@media (max-width: 767px) {
+  .depoimento-card {
+    width: 240px;
+  }
+
+  .marquee-fade--left,
+  .marquee-fade--right {
+    width: 60px;
+  }
+}
