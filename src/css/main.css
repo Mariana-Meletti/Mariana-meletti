@@ -1685,21 +1685,52 @@ h4, .h4 {
 
 .livro__cta {
   margin-top: 16px;
-  border: 2px solid var(--color-white);
-  color: var(--color-white);
-  background: transparent;
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-size: var(--font-size-body);
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #25d366;
+  color: #fff;
   text-decoration: none;
-  display: inline-block;
-  transition: background 0.2s ease, color 0.2s ease;
+  padding: 16px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35), 0 1px 4px rgba(0,0,0,0.2);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
 .livro__cta:hover {
-  background: var(--color-white);
-  color: var(--color-dark);
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.livro__cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 12px rgba(37, 211, 102, 0.3);
+}
+
+.livro__cta-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.95;
+}
+
+.livro__cta-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.livro__cta-text strong {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.livro__cta-text small {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.85;
 }
 
 /* Responsivo livro */
